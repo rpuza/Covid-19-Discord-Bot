@@ -36,6 +36,6 @@ public class main extends ListenerAdapter {
             System.out.println("line " + lineNumber + " :" + line);
             lineNumber++;
         }
-        return "why";
+        return "lol";
     }
 }
