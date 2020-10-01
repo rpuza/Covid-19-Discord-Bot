@@ -2,7 +2,7 @@ import net.dv8tion.jda.core.AccountType;
 import net.dv8tion.jda.core.JDABuilder;
 import net.dv8tion.jda.core.events.message.MessageReceivedEvent;
 import net.dv8tion.jda.core.hooks.ListenerAdapter;
-
+import java.util.*;
 import javax.security.auth.login.LoginException;
 
 public class main extends ListenerAdapter {
@@ -19,7 +19,7 @@ public class main extends ListenerAdapter {
         System.out.println("We received a message from " +
                 event.getAuthor().getName() + ": " +
                 event.getMessage().getContentDisplay());
-        if(event.getMessage().getContentRaw().equals("Say Hello!")){
+        if(event.getMessage().getContentRaw().toLowerCase().equals("say hello")){
             event.getChannel().sendMessage("Hello World!").queue();
         }
     }
