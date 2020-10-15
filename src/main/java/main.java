@@ -6,6 +6,8 @@ import net.dv8tion.jda.core.hooks.ListenerAdapter;
 import javax.security.auth.login.LoginException;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class main extends ListenerAdapter {
@@ -36,6 +38,11 @@ public class main extends ListenerAdapter {
             System.out.println("line " + lineNumber + " :" + line);
             lineNumber++;
         }
+        // Find # of users?!
+        ArrayList<String> activities = new ArrayList<>(Arrays.asList("Among_Us", "Scener", "Virtual_Party", "FaceTime", "Uno_Online", "Spoon", "Splendee"));
+        ArrayList<String> activitiesNum = new ArrayList<>(Arrays.asList("4-10", "2+", "2+", "2+", "4", "2+", "2-4"));
+        int rand = (int) (Math.random() % activities.size());
+        System.out.printf("How about playing %s with your family or friends?! It's safe, fun, and very interactive! All you need is a stable Internet connection and gatherings of %s people.\n",activities.get(rand), activitiesNum.get(rand));
         return "lol";
     }
 }
