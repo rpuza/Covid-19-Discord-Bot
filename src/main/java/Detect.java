@@ -13,7 +13,7 @@ public class Detect {
                     if (message[i].equalsIgnoreCase(LIST_OF_MYTHS[b])){
                         e.getMessage().delete().queue();
                         myth = true;
-                        if(DetectMessage.allowed){ //Prints a message IF enabled by $detectfakenews
+                        if(DetectMessage.allowed){ //Prints a message IF enabled by ~detectfakenews
                             e.getChannel().sendMessage("Don't get fooled by a false information! " + e.getMember().getUser().getName()).queue();
                         }
                     }
