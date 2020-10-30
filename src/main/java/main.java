@@ -1,5 +1,6 @@
 import net.dv8tion.jda.core.AccountType;
 import net.dv8tion.jda.core.JDABuilder;
+import net.dv8tion.jda.core.entities.Message;
 import net.dv8tion.jda.core.events.message.MessageReceivedEvent;
 import net.dv8tion.jda.core.hooks.ListenerAdapter;
 
@@ -14,7 +15,10 @@ public class main extends ListenerAdapter {
     public static void main(String[] args) throws LoginException, FileNotFoundException {
         JDABuilder builder = new JDABuilder(AccountType.BOT);
         String token = "NzUzNjk5NjUzODE1NTAwOTIw.X1p_gA.pRobNCcl11A_kPjrOvivZnCy3sg";
-        System.out.println(selectActivity());
+        builder.addEventListener(new Detect());
+        builder.addEventListener(new DetectMessage());
+        builder.addEventListener(new DetectOnOff());
+//        System.out.println(selectActivity());
         /*builder.setToken(token);
         builder.addEventListener(new main());
         builder.buildAsync();*/
