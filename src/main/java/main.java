@@ -18,6 +18,8 @@ public class main extends ListenerAdapter {
         builder.addEventListener(new Detect());
         builder.addEventListener(new DetectMessage());
         builder.addEventListener(new DetectOnOff());
+        builder.addEventListener(new HandWashReminder());
+        builder.addEventListener(new Quarantine());
 //        System.out.println(selectActivity());
         /*builder.setToken(token);
         builder.addEventListener(new main());
