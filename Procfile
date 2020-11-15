@@ -1,0 +1,1 @@
+worker: java -jar out/artifacts/Library_jar/Library.jar
