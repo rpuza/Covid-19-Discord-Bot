@@ -1,7 +1,9 @@
 import net.dv8tion.jda.core.AccountType;
+import net.dv8tion.jda.core.JDA;
 import net.dv8tion.jda.core.JDABuilder;
 import net.dv8tion.jda.core.entities.Message;
 import net.dv8tion.jda.core.events.message.MessageReceivedEvent;
+import net.dv8tion.jda.core.events.message.guild.GuildMessageReceivedEvent;
 import net.dv8tion.jda.core.hooks.ListenerAdapter;
 
 import javax.security.auth.login.LoginException;
@@ -20,6 +22,11 @@ public class main extends ListenerAdapter {
         builder.addEventListener(new DetectOnOff());
         builder.addEventListener(new HandWashReminder());
         builder.addEventListener(new Quarantine());
+        builder.addEventListener(new Test());
+//        Test t = new Test();
+//        JDA jda = new JDABuilder(AccountType.BOT).setToken("token").buildBlocking();
+//        Message m;
+//        t.onGuildMessageReceived(new GuildMessageReceivedEvent(jda, 0L, (Message) "Message"));
 //        System.out.println(selectActivity());
         /*builder.setToken(token);
         builder.addEventListener(new main());
